@@ -1,0 +1,27 @@
+{
+  "name": "Demo",
+  "version": "1.2.0",
+  "description": "",
+  "main": "lib/main.cjs",
+  "files": [
+    "lib/*"
+  ],
+  "exports": {
+    "import": "./lib/main.mjs",
+    "require": "./lib/main.cjs"
+  },
+  "scripts": {
+    "prebuild": "rm -rf lib",
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "author": "Zarrar aka Zony",
+  "license": "MIT",
+  "dependencies": {
+    "socketcluster-client": "^16.0.4"
+  },
+  "devDependencies": {
+    "rollup": "^2.72.1"
+  }
+}
